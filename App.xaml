@@ -1,0 +1,36 @@
+﻿<Application
+  x:Class="MainDataDashboard.App"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:vm="clr-namespace:MainDataDashboard.ViewModels"
+  StartupUri="Views/MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- MaterialDesign Dark + Defaults -->
+                <ResourceDictionary
+          Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml"/>
+                <ResourceDictionary
+          Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml"/>
+
+                <!-- MaterialDesign Colors -->
+                <ResourceDictionary
+          Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml"/>
+                <ResourceDictionary
+          Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Pink.xaml"/>
+
+                <!-- DevExpress Theme إذا تحتاجه -->
+                <ResourceDictionary
+          Source="pack://application:,,,/DevExpress.Xpf.Core.v24.1;component/Themes/Office2019Colorful.xaml"/>
+
+                <!-- مواردك المخصصة -->
+                <ResourceDictionary Source="Colors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- ViewModel -->
+            <vm:MainViewModel x:Key="MainVM"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

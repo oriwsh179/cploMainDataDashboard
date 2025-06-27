@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="CardBackground" Color="#2E2B4F"/>
+    <SolidColorBrush x:Key="CardForeground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="AccentColor"     Color="#FF4081"/>
+    <SolidColorBrush x:Key="HighlightColor"  Color="#6C63FF"/>
+
+</ResourceDictionary>

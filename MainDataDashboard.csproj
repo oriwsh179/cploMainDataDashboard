@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+	  <UseWPF>true</UseWPF>
+	  <EnablePreviewFeatures>true</EnablePreviewFeatures>
+	  <AssemblyName>MainDataDashboard</AssemblyName>
+	  <RootNamespace>MainDataDashboard</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DevExpress.Images" Version="24.2.7" />
+		<PackageReference Include="DevExpress.Wpf.Core" Version="24.2.7" />
+		<PackageReference Include="DevExpress.Wpf.ThemesLW" Version="24.2.7" />
+		<PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-rc1" />
+
+		<PackageReference Include="MaterialDesignColors" Version="5.2.1" />
+		<PackageReference Include="MaterialDesignThemes.Wpf" Version="5.2.1" />
+
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.6" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.6" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.6" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
