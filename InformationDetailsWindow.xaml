@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="MainDataDashboard.Views.InformationDetailsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="تفاصيل المعلوماتية"
+    Height="500" Width="800"
+    Background="#1F1B2E">
+    <Grid Margin="12">
+        <TabControl>
+
+            <TabItem Header="السيارات">
+                <DataGrid ItemsSource="{Binding CarStatuses}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  Background="Transparent"
+                  RowBackground="#2E2B4F"
+                  AlternatingRowBackground="#332E2B4F"
+                  Foreground="{StaticResource CardForeground}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="الحالة" Binding="{Binding StatusName}"/>
+                        <DataGridTextColumn Header="العدد"  Binding="{Binding Count}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="المكاتب–الأقسام">
+                <DataGrid ItemsSource="{Binding DeptOfficeData}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  Background="Transparent"
+                  RowBackground="#2E2B4F"
+                  AlternatingRowBackground="#332E2B4F"
+                  Foreground="{StaticResource CardForeground}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="المكتب"  Binding="{Binding Office}"/>
+                        <DataGridTextColumn Header="القسم"  Binding="{Binding Dept}"/>
+                        <DataGridTextColumn Header="العدد"  Binding="{Binding Count}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
